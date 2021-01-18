@@ -1,22 +1,14 @@
-# -*- coding: utf-8 -*-
-
 import os
 
 import pytest
+from democritus_archives import archive_create, archive_read
+from democritus_file_system import file_write, file_delete, directory_create, directory_delete
 
-from democritus_archives import archive_create, archive_read, url_unarchive
-from .files import file_write, file_delete
-from .directories import directory_create, directory_delete
+from .test_archive_utils import subprocess_run
 
 TEST_DIRECTORY_PATH = './_test_data/archive/'
 TEST_DIRECTORY_BASE_PATH = './_test_data/'
 DEFAULT_FILE_CONTENTS = 'abc'
-
-
-# TODO: Sept, 2020 - this raises an not implemented error
-def test_url_unarchive_1():
-    result = url_unarchive('https://hightower.space/foo')
-    assert result == ''
 
 
 @pytest.fixture(autouse=True)
@@ -53,8 +45,6 @@ def test_archive_read():
 
 
 def test_archive_read_password_encrypted():
-    from subprocess_wrapper import subprocess_run
-
     password = 'foo'
 
     file_path = _create_sample_file('a')

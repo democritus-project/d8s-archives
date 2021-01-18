@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-
-import os
-import sys
 from typing import Iterable, Tuple
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 
 
 # TODO: I would like to consolidate some of these functions into one function which takes an argument - the archive_read function should use 'request or read' paradigm
@@ -21,7 +15,7 @@ def _archive_zip(output_path):
 # TODO: the first argument for this function is `file_path`... can this function also take a directory path? If so, the file_path parameter should be changed
 def archive_create(file_path, output_path, *, archive_name=None):
     """Archive the given file."""
-    from files import file_name
+    from democritus_file_system import file_name
 
     if archive_name is None:
         archive_name = file_name(file_path)
@@ -37,22 +31,12 @@ def _archive_unzip(archive_path, *, password=None):
     return zipfile.ZipFile(archive_path)
 
 
-def url_unarchive(url):
-    """Download the zip from the URL and return the unzipped contents."""
-    from networking import get
-
-    # TODO: implement
-    raise NotImplementedError
-
-    # return _archive_unzip(get(url))
-
-
 # TODO: I think the `archive_name` parameter should be changed to something like `file_name`
 # TODO: I think the `file_path` parameter should be changed to something like `archive_path`
 # TODO: we should probably allow an encoding to be passed in for decoding the zip contents
 def archive_read(file_path, *, archive_name=None, password=None) -> Iterable[Tuple[str, str]]:
     """Read file(s) from the archive. If a archive_name is given, read only that file; otherwise, read all of the files."""
-    from strings import bytes_decode_as_string, string_encode_as_bytes
+    from democritus_strings import bytes_decode_as_string, string_encode_as_bytes
 
     if password:
         password = string_encode_as_bytes(password)
