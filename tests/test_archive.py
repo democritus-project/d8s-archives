@@ -1,8 +1,9 @@
 import os
 
 import pytest
+from democritus_file_system import directory_create, directory_delete, file_write
+
 from democritus_archives import archive_create, archive_read
-from democritus_file_system import file_write, file_delete, directory_create, directory_delete
 
 from .test_archive_utils import subprocess_run
 
@@ -31,7 +32,7 @@ def teardown_module():
 def _create_sample_file(path, contents=DEFAULT_FILE_CONTENTS):
     full_path = os.path.join(TEST_DIRECTORY_PATH, path)
     result = file_write(full_path, contents)
-    assert result == True
+    assert result
     return full_path
 
 

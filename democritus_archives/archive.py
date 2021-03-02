@@ -1,6 +1,5 @@
 from typing import Iterable, Tuple
 
-
 # TODO: I would like to consolidate some of these functions into one function which takes an argument - the archive_read function should use 'request or read' paradigm
 # TODO: can/should we apply atomic writing to the archive_create function?
 
