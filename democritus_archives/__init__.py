@@ -6,13 +6,13 @@ except ImportError:
 from .archive import *
 
 try:
-    __version__ = version('democritus_archives')
+    __version__ = version('d8s_archives')
 except PackageNotFoundError:
     message = (
-        'Unable to find a version number for "democritus_archives". '
+        'Unable to find a version number for "d8s_archives". '
         + 'This likely means the library was not installed properly. '
         + 'Please re-install it and, if the problem persists, '
-        + 'raise an issue here: https://github.com/democritus-project/democritus-archives/issues.'
+        + 'raise an issue here: https://github.com/democritus-project/d8s-archives/issues.'
     )
     print(message)
 

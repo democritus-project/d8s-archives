@@ -1,8 +1,8 @@
 # Democritus Archives
 
-[![PyPI](https://img.shields.io/pypi/v/democritus-archives.svg)](https://pypi.python.org/pypi/democritus-archives)
-[![Build Status](https://travis-ci.com/democritus-project/democritus-archives.svg?branch=main)](https://travis-ci.com/democritus-project/democritus-archives)
-[![codecov](https://codecov.io/gh/democritus-project/democritus-archives/branch/main/graph/badge.svg?token=V0WOIXRGMM)](https://codecov.io/gh/democritus-project/democritus-archives)
+[![PyPI](https://img.shields.io/pypi/v/d8s-archives.svg)](https://pypi.python.org/pypi/d8s-archives)
+[![Build Status](https://travis-ci.com/democritus-project/d8s-archives.svg?branch=main)](https://travis-ci.com/democritus-project/d8s-archives)
+[![codecov](https://codecov.io/gh/democritus-project/d8s-archives/branch/main/graph/badge.svg?token=V0WOIXRGMM)](https://codecov.io/gh/democritus-project/d8s-archives)
 
 Democritus functions<sup>[1]</sup> for working with archives.
 
