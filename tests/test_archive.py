@@ -3,7 +3,7 @@ import os
 import pytest
 from democritus_file_system import directory_create, directory_delete, file_write
 
-from democritus_archives import archive_create, archive_read
+from d8s_archives import archive_create, archive_read
 
 from .test_archive_utils import subprocess_run
 
