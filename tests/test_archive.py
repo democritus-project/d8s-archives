@@ -1,7 +1,7 @@
 import os
 
 import pytest
-from democritus_file_system import directory_create, directory_delete, file_write
+from d8s_file_system import directory_create, directory_delete, file_write
 
 from d8s_archives import archive_create, archive_read
 

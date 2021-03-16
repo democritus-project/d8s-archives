@@ -10,7 +10,7 @@ def _archive_zip(output_path):
 
 def archive_create(file_path, output_path, *, archive_name=None):
     """Archive the given file."""
-    from democritus_file_system import file_name
+    from d8s_file_system import file_name
 
     if archive_name is None:
         archive_name = file_name(file_path)
@@ -31,7 +31,7 @@ def _archive_unzip(archive_path):
 # TODO: we should probably allow an encoding to be passed in for decoding the zip contents
 def archive_read(file_path, *, archive_name=None, password=None) -> Iterable[Tuple[str, str]]:
     """Read file(s) from the archive. If archive_name is given, read only that file; otherwise, read all files."""
-    from democritus_strings import bytes_decode_as_string, string_encode_as_bytes
+    from d8s_strings import bytes_decode_as_string, string_encode_as_bytes
 
     if password:
         password = string_encode_as_bytes(password)
