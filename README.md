@@ -20,9 +20,16 @@ We use `d8s` as an abbreviation for `democritus` (you can read more about this [
 pip install d8s-archives
 ```
 
-## Usage
+## Functions
 
-Coming soon...
+  - ```python
+    def archive_create(file_path, output_path, *, archive_name=None):
+        """Archive the given file."""
+    ```
+  - ```python
+    def archive_read(file_path, *, archive_name=None, password=None) -> Iterable[Tuple[str, str]]:
+        """Read file(s) from the archive. If archive_name is given, read only that file; otherwise, read all files."""
+    ```
 
 ## Development
 
