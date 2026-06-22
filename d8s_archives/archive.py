@@ -5,7 +5,7 @@ def _archive_zip(output_path):
     """Return the file at the output_path as a zipfile."""
     import zipfile
 
-    return zipfile.ZipFile(output_path, mode='w')
+    return zipfile.ZipFile(output_path, mode="w")
 
 
 def archive_create(file_path, output_path, *, archive_name=None):
